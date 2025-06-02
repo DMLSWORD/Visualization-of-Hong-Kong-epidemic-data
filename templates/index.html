@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>香港疫情数据大屏</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts-liquidfill@3.1.0/dist/echarts-liquidfill.min.js"></script>
+    <!-- 引入香港地图数据 -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@4.9.0/map/js/province/xianggang.js"></script>
+</head>
+<body>
+    <div class="main-header">
+        <h1 class="main-title">香港疫情数据可视化大屏</h1>
+        <div class="main-subtitle">实时疫情数据分析与监控</div>
+    </div>
+    <div class="chart-container">
+        <div class="chart-grid">
+            <div class="chart-item full-width" id="overviewChart"></div>
+            <div class="chart-item" id="trendChart"></div>
+            <div class="chart-item" id="mapChart"></div>
+            <div class="chart-item" id="growthChart"></div>
+            <div class="chart-item" id="proportionChart"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html> 

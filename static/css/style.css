@@ -1,0 +1,80 @@
+/* 全局样式 */
+body {
+    margin: 0;
+    padding: 0;
+    background: #f8fafc;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+}
+
+/* 头部样式 */
+.main-header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+    margin-bottom: 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.main-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.main-subtitle {
+    font-size: 24px;
+    color: #e2e8f0;
+    margin-top: 15px;
+}
+
+/* 图表容器样式 */
+.chart-container {
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+.chart-grid {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+}
+
+.chart-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    min-height: 500px;
+}
+
+.chart-item.full-width {
+    grid-column: 1 / -1;
+    height: 600px;
+}
+
+/* 响应式布局 */
+@media (max-width: 1200px) {
+    .chart-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .chart-item {
+        min-height: 400px;
+    }
+    
+    .chart-item.full-width {
+        height: 500px;
+    }
+    
+    .main-title {
+        font-size: 36px;
+    }
+    
+    .main-subtitle {
+        font-size: 20px;
+    }
+} 
